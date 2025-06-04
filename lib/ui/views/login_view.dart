@@ -8,6 +8,9 @@ import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import 'package:e301_web/services/navigation_service.dart';
+import 'package:e301_web/services/local_storage.dart';
+
 class LoginView extends StatelessWidget {
   const LoginView({super.key});
 
@@ -27,7 +30,12 @@ class LoginView extends StatelessWidget {
           return Container(
             margin: EdgeInsets.only(top: 50),
             padding: EdgeInsets.symmetric(horizontal: 20),
-            color: Colors.black,
+            color: const Color.fromARGB(
+              255,
+              11,
+              12,
+              19,
+            ), // Usa el color de fondo centralizado
             child: Center(
               child: ConstrainedBox(
                 constraints: BoxConstraints(maxWidth: 370),
@@ -36,6 +44,8 @@ class LoginView extends StatelessWidget {
                   key: loginFormProvider.formKey,
                   child: Column(
                     children: [
+                      SizedBox(height: 40),
+
                       TextFormField(
                         onChanged: (value) => loginFormProvider.email = value,
                         validator: (value) {
@@ -78,7 +88,8 @@ class LoginView extends StatelessWidget {
                           if (isValid) {
                             authProvider.login(
                               loginFormProvider.email,
-                              loginFormProvider.password);
+                              loginFormProvider.password,
+                            );
                           }
                         },
                         text: 'Ingresar',

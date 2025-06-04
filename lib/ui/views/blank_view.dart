@@ -10,12 +10,9 @@ class BlankView extends StatelessWidget {
     return Container(
       child: ListView(
         children: [
-          Text('Dashboard View',style: CustomLabels.h1),
+          Text('Dashboard View', style: CustomLabels.h1),
           SizedBox(height: 10),
-          WhiteCard(
-            title: 'Sales Statistics',
-            child: Text('#TeamSistemas')
-          ),
+          WhiteCard(title: 'Sales Statistics', child: Text('#TeamSistemas')),
         ],
       ),
     );

@@ -30,47 +30,47 @@ class Sidebar extends StatelessWidget {
           //Opciones
           TextSeparator(text: 'main'),
           MenuItem(
-            text: 'Dashboard',
+            text: 'Inicio',
             icon: Icons.compass_calibration_outlined,
             onPressed: () => navigateTo(Flurorouter.dashboardRoute),
             isActive: false,
           ),
           MenuItem(
-            text: 'Orders',
+            text: 'Nosotros',
             icon: Icons.shopping_cart_checkout_outlined,
-            onPressed: () {},
+            onPressed: () => navigateTo(Flurorouter.nosotrosRoute),
           ),
           MenuItem(
-            text: 'Analytics',
+            text: 'Estadisticas',
             icon: Icons.show_chart_outlined,
-            onPressed: () {},
+            onPressed: () => navigateTo(Flurorouter.staticsRoute),
           ),
           MenuItem(
-            text: 'Categories',
+            text: 'Categorias',
             icon: Icons.layers_clear_outlined,
-            onPressed: () {},
+            onPressed: () => navigateTo(Flurorouter.categoriaRoute),
           ),
           MenuItem(
-            text: 'Products',
+            text: 'Productos',
             icon: Icons.dashboard_outlined,
-            onPressed: () {},
+            onPressed: () => navigateTo(Flurorouter.productsRoute),
           ),
           MenuItem(
-            text: 'Discounts',
+            text: 'Usuarios',
             icon: Icons.attach_money_outlined,
-            onPressed: () {},
+            onPressed: () => navigateTo(Flurorouter.userRoute),
           ),
           MenuItem(
-            text: 'Customers',
+            text: 'config. Admin.',
             icon: Icons.people_alt_outlined,
-            onPressed: () {},
+            onPressed: () => navigateTo(Flurorouter.settingsRoute),
           ),
           SizedBox(height: 30),
           TextSeparator(text: 'UI Elements'),
           MenuItem(
-            text: 'Icons',
+            text: 'Contacto',
             icon: Icons.list_alt_outlined,
-            onPressed: () => navigateTo(Flurorouter.iconsRoute),
+            onPressed: () => navigateTo(Flurorouter.contactRoute),
           ),
           MenuItem(
             text: 'Marketing',
@@ -90,9 +90,9 @@ class Sidebar extends StatelessWidget {
           SizedBox(height: 30),
           TextSeparator(text: 'Exit'),
           MenuItem(
-            text: 'Logout',
+            text: 'Salir',
             icon: Icons.exit_to_app_outlined,
-            onPressed: () {},
+            onPressed: () => navigateTo(Flurorouter.loginRoute),
           ),
         ],
       ),
@@ -100,7 +100,9 @@ class Sidebar extends StatelessWidget {
   }
 
   BoxDecoration buildBoxDecoration() => BoxDecoration(
-    gradient: LinearGradient(colors: [Color(0xff092044), Color(0xff092042)]),
+    gradient: LinearGradient(
+      colors: [Color.fromARGB(255, 121, 0, 121), Color(0xff092042)],
+    ),
     boxShadow: [BoxShadow(color: Colors.black38, blurRadius: 10)],
   );
 }

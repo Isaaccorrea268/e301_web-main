@@ -10,7 +10,7 @@ class CustomOutlinedButton extends StatelessWidget {
     super.key,
     required this.onPressed,
     required this.text,
-    this.color = const Color.fromARGB(255, 206, 3, 155),
+    this.color = const Color.fromARGB(255, 184, 2, 138),
     this.isFilled = false,
   });
 

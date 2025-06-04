@@ -21,6 +21,10 @@ dev_dependencies:
     sdk: flutter
 
 flutter:
-  uses-material-design: true
   assets:
-    - assets/
+    - assets/logo.jpg
+    - assets/fondo.jpg
+    - assets/mane.jpg
+    - assets/isaac.jpg
+    - assets/gil.jpg
+    - assets/equipo.jpg
